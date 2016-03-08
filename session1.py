@@ -206,6 +206,7 @@ class inventory(object):
             self.space = DEFAULT_SPACE
             self.weight = DEFAULT_WEIGHT
 
-class experience(
+class experience(object):
+    pass
     
         
