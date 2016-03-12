@@ -7,10 +7,10 @@ class Game(object):
     DEFAULT_WIDTH = 10
     DEFAULT_LENGTH = 10
 
-    def __init__(self):
+    def __init__(self,client):
         self.gamestate = Gamestate()
         self.is_running = True
-
+        self.client = client
         # Initialize the locations
         temp_world = [Location(x,y,"An arena") for x in range(self.DEFAULT_WIDTH) for y in range(self.DEFAULT_LENGTH)]
         temp_people = [Person(choice(FIRSTNAMEPOOL),choice(LASTNAMEPOOL)) for x in range(20)]
@@ -29,7 +29,3 @@ class Game(object):
             x.direction = choice(direction)
             x.location = x.location.x
             x.update(self.location,self.hp,self.sp)
-
-if __name__ == "__main__":
-    a = Game()
-    a.start()

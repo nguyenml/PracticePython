@@ -37,7 +37,6 @@ class Person(object):
         if(first and last):
             self.first_name = first
             self.last_name = last
-    
         else:
             # Defaults
             self.first_name = Person.DEFAULT_FIRSTNAME
@@ -45,14 +44,12 @@ class Person(object):
         self.location = location
         self.hp = hp
         self.sp = sp
-    
+
     def update(self,location,hp,sp):
         self.location = location
         self.hp = hp
         self.sp = sp
         pass
-    
-    
 
 # <codecell>
 
@@ -74,10 +71,9 @@ class Location(object):
             self.y_coord = Location.DEFAULT_Y_COOR
             self.desc = self.DEFAULT_DESC
         self.space_filled = space_filled
-        
+
     def update(self,filled):
         self.space_filled = space_filled
-        
 
 
 # <codecell>
@@ -111,7 +107,7 @@ def start_gamestate():
     DEFAULT_SIZE = 30
     # Create persons
     persons = []
-    for x in range(DEFAULT_SIZE): 
+    for x in range(DEFAULT_SIZE):
         person.append(Person(str(x),str(x+1)))
     # Create items
     items = []
