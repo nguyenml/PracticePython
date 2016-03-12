@@ -1,11 +1,11 @@
 from src.game import Game
 
 def start_db():
-    from pymongo import MongoClient
-    client = MongoClient('localhost', 27016)
-    return client
+    from flask.ext.mongoengine import MongoEngine
+    db = MongoEngine()
+    return db
 
 def start():
-    client = start_db()
-    game = Game(client)
+    db = start_db()
+    game = Game(db)
     game.start()
