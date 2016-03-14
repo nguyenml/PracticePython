@@ -1,0 +1,13 @@
+FIRST_NAME_POOL = [
+    "Matt",
+    "Ben",
+    "Kyle",
+    "Mel",
+    "Joey"]
+
+LAST_NAME_POOL = [
+    "Leblanc",
+    "Stiller",
+    "Hannon",
+    "Pratt",
+    "Carter"]
