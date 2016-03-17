@@ -1,7 +1,7 @@
 from random import choice
 from time import sleep
 
-from base import Gamestate
+from gamestate import Gamestate
 
 class Game(object):
     """
