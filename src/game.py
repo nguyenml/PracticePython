@@ -1,6 +1,6 @@
 from random import choice
 from time import sleep
-
+import uuid
 from gamestate import Gamestate
 
 class Game(object):
@@ -9,13 +9,13 @@ class Game(object):
     """
 
     def __init__(self, db):
-        self.gamestate = Gamestate(db)
-        self.gamestate.init_locations(db)
-        self.gamestate.init_persons(db)
-        self.gamestate.init_items(db)
+        ts = uuid.uuid4().int
+        self.db = db[str(ts)]
+        self.gamestate = Gamestate(db[str(ts)])
+        self.gamestate.init_locations(db[str(ts)])
+        self.gamestate.init_persons(db[str(ts)])
+        self.gamestate.init_items(db[str(ts)])
         self.is_running = True
-        self.db = db
-
         self.start()
     def start(self):
         while(self.is_running):

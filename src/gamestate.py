@@ -33,7 +33,7 @@ class Gamestate(object):
     def init_persons(self):
         x,y = randint(0,WIDTH-1), randint(0,LENGTH-1)
         temp_people = [Person(choice(FIRSTNAMEPOOL), choice(LASTNAMEPOOL), location=self.locations[x][y]) for _ in range(POPULATION)]
-        self.persons = temp_people
+        POPULATIONself.persons = temp_people
 
     def init_items(self):
         pass
