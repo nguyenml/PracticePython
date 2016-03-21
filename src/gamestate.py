@@ -14,7 +14,7 @@ LASTNAMEPOOL = ["Leblanc","Stiller","Hannon","Pratt","Carter"]
 
 from random import choice
 class Gamestate(object):
-    def __init__(self):
+    def __init__(self, db):
         """
         Represents the actual game
         """
@@ -24,6 +24,7 @@ class Gamestate(object):
         self.things = None # Simple Sparse Array
         self.serial_counter = 0 # this is for the item serialization process
         self.q = q()
+        self.db = db
 
     def init_locations(self):
         temp_world = [[Location(x,y,"An arena") for x in range(WIDTH)] for y in range(LENGTH)]

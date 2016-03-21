@@ -9,13 +9,14 @@ class Game(object):
     """
 
     def __init__(self, db):
-        self.gamestate = Gamestate()
-        self.gamestate.init_locations()
-        self.gamestate.init_persons()
-        self.gamestate.init_items()
+        self.gamestate = Gamestate(db)
+        self.gamestate.init_locations(db)
+        self.gamestate.init_persons(db)
+        self.gamestate.init_items(db)
         self.is_running = True
         self.db = db
 
+        self.start()
     def start(self):
         while(self.is_running):
             self.update()
