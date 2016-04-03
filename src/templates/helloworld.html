@@ -12,6 +12,7 @@ textarea {
 
 
 <script src="{{ url_for('static', filename='public/js/bootstrap.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='public/css/bootstrap.min.css') }}">
 </head>
 
@@ -27,4 +28,11 @@ textarea {
 
     <h3>Conway's Game of Life Modified</h3>
     <p>We are attempting to render a dynamic grid of our simulation here.</p>
+<script type="text">
+var mySquare=svg.append("rect")
+.attr("x",60)
+.attr("y",60)
+.attr("width",60)
+.attr("height",60);
+</script>
 </body>

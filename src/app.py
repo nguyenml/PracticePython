@@ -18,8 +18,8 @@ def test():
 
 if __name__ == "__main__":
     print("Launching web application.")
-    thread.start_new_thread(app.run,())
+    # thread.start_new_thread(app.run,())
     print("Launching simulation.")
-    g = Game(db)
-
+    #g = Game(db)
+    app.run()
 

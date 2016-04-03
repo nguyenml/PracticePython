@@ -40,3 +40,7 @@ class Gamestate(object):
 
     def update(self):
         pass
+        """
+        hashmap using @ to differentiate between persons(01) and locations(@01)
+        """
+
